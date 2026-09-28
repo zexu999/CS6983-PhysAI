@@ -4,11 +4,11 @@ Use WASD to move a blue Actor through a maze. First step on the yellow pressure 
 
 ## How to run
 
-1. Create a new **3D** Unity project (Unity 2022 LTS or Unity 6; Built-in or URP both work).
-2. Copy the `Assets/Scripts` folder into the project's `Assets` folder.
-3. In the default `SampleScene`, create an empty GameObject named `Level` and add the **LevelBuilder** component to it. (LevelBuilder adds the GameManager itself.)
-4. Keep the default Main Camera and Directional Light. The builder attaches `CameraFollow` to the camera.
-5. Press **Play**.
+1. In Unity Hub, click **Add** and select the `CodingAssignment1` folder (Unity 6.3 LTS).
+2. Open `Assets/Scenes/SampleScene`.
+3. Press **Play**.
+
+Note: *Active Input Handling* is set to **Both** in Player Settings (the scripts use the legacy Input Manager).
 
 When you press Play, the level is generated from the text grid in `LevelBuilder.layout`. You can edit the grid in the Inspector.
 
