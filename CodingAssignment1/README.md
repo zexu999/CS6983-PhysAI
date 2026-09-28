@@ -61,16 +61,16 @@ All C# scripts in `Assets/Scripts` were written with help from Claude (Anthropic
 
 ### 1. What must be true for a run to count as success? How could a player cheat, and does the design block it?
 
-_(your answer)_
+For a run to count as a success, the Actor must first physically step on the yellow pressure plate to make the red door sink. In the script, this sets a boolean state to true and logs "Roadblock has been removed". Finally, the player must push the wooden box into the bottom-left green area, triggering the "SUCCESS!" log. A player might try to cheat by pushing the box into the green area before triggering the sensor. My design blocks this physically with the red door blocking the path, and in the script by ensuring the deposit zone only accepts the payload if the roadblock state is already cleared.
 
 ### 2. One unexpected behavior while building: cause and fix
 
-_(your answer)_
+While building the scene, I encountered an unexpected behavior where the Actor was completely unable to push the wooden box. This was caused by the Actor having insufficient force to overcome the box's high friction. To fix this, I increased the Actor Move Force from 25 to 40. I also decreased the Payload Friction from 0.6 to 0.3, which immediately allowed the Actor to smoothly push the payload through the maze.
 
 ### 3. One design decision: what I optimized for and what I gave up
 
-_(your answer)_
+I made a specific design decision to include an input mapping where pressing the 'R' key restarts the level. I optimized for player fairness and control feel, knowing that physics objects like the box can easily get stuck in tight corners. By adding this reset feature, I gave up the strict penalty of forcing the player to flawlessly navigate the maze on their first try, ensuring the game remains enjoyable rather than frustrating.
 
 ### 4. Weakest part of the system and what I would change first
 
-_(your answer)_
+The weakest part of my system right now is the robustness of the collision geometry in tight spaces, as the box can still occasionally get stuck against the sharp 90-degree wall corners (which necessitated the 'R' restart feature). If I could change one thing first, I would replace the Payload's Box Collider with a Sphere Collider, or add rounded collision helper-meshes to the maze corners. This would prevent the payload from physically snagging on the vertices when pushed at an angle, making the pushing mechanics much smoother without needing manual level resets.
