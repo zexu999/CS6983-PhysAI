@@ -4,7 +4,11 @@ UR5e arm from MuJoCo Menagerie running in Unity with the MuJoCo plugin. I collec
 
 - **Report (setup, numbers, design question):** [REPORT.md](REPORT.md)
 - **Step 5 reflection:** [REFLECTION.md](REFLECTION.md)
-- **Demo video:** _link here_
+- **Demo video (43 s):** [media/demo.mp4](media/demo.mp4)
+
+![demo](media/demo.gif)
+
+Dragging `TrackingTarget` in the Scene view: IK solves a joint goal, the CMA-ES controller drives the arm there, the cyan ghost arm is the world model's imagined pose, and the yellow line is its 100-step end-effector forecast. The status bar in the video shows the live log (`EE-target dist` ≈ 0.6 cm at rest).
 
 ## Results at a glance
 | | |
