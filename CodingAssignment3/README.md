@@ -4,7 +4,7 @@ UR5e arm from MuJoCo Menagerie running in Unity with the MuJoCo plugin. I collec
 
 - **Report (setup, numbers, design question):** [REPORT.md](REPORT.md)
 - **Step 5 reflection:** [REFLECTION.md](REFLECTION.md)
-- **Demo video (43 s):** [media/demo.mp4](media/demo.mp4)
+- **Demo video (36 s):** [media/demo.mp4](media/demo.mp4)
 
 ![demo](media/demo.gif)
 
