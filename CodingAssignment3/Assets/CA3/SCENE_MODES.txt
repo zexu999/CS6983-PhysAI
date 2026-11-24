@@ -1,0 +1,17 @@
+# Quick scene modes (Inspector)
+
+## After importing your Menagerie arm
+- Implement and wire ArmAgent for your MJCF joint/actuator/EE names
+- Fill ArmJointController homeTargets + jointRanges from the MJCF
+
+## Collect rollout
+- ArmJointController: emitActions=true (random joint goals)
+- Disable: WorldModelController, IkGoalProvider
+- Enable: RolloutRecorder
+- Optional: disable WorldModelDriver
+
+## Live tracking (after training)
+- Create Sphere "TrackingTarget" → wire into your IkGoalProvider
+- Enable IkGoalProvider + WorldModelController (controller.json)
+- ArmJointController: emitActions=false (goals come from IK)
+- Disable RolloutRecorder
